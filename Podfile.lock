@@ -26,7 +26,7 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - GoogleMaps
     - GRDB.swift
     - HyperTrack
@@ -44,4 +44,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: fd8b664538ea1af026130bbd224e6161ee92bfad
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5

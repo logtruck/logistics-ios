@@ -67,6 +67,7 @@
 		0DED524323E272FB002C943C /* DeliveriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED524223E272FB002C943C /* DeliveriesView.swift */; };
 		0DED524523E299CD002C943C /* NavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED524423E299CD002C943C /* NavigationBackButton.swift */; };
 		0DF4AFB423E1324C000ABD51 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4AFB323E1324C000ABD51 /* Publisher.swift */; };
+		25C0CF3CFE86A9AD91FB9D72 /* Pods_Logistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE37A10502A1F765861BA36 /* Pods_Logistics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,9 @@
 		0DED524223E272FB002C943C /* DeliveriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveriesView.swift; sourceTree = "<group>"; };
 		0DED524423E299CD002C943C /* NavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackButton.swift; sourceTree = "<group>"; };
 		0DF4AFB323E1324C000ABD51 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
+		392BE6D54858A17729EF5E30 /* Pods-Logistics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logistics.debug.xcconfig"; path = "Target Support Files/Pods-Logistics/Pods-Logistics.debug.xcconfig"; sourceTree = "<group>"; };
+		4EE37A10502A1F765861BA36 /* Pods_Logistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E0DB9260CFD9059722F747 /* Pods-Logistics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logistics.release.xcconfig"; path = "Target Support Files/Pods-Logistics/Pods-Logistics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D99E97123DE26A100F5056E /* LogisticsKit.framework in Frameworks */,
+				25C0CF3CFE86A9AD91FB9D72 /* Pods_Logistics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +190,7 @@
 				0D99E96B23DE26A100F5056E /* LogisticsKit */,
 				0D4A78D223DBD47D00FF1F22 /* Products */,
 				F5262965A279970E4E04B69F /* Pods */,
+				6265B94FC4EBC5F75925C413 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 1;
@@ -385,9 +391,19 @@
 			path = MockData;
 			sourceTree = "<group>";
 		};
+		6265B94FC4EBC5F75925C413 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EE37A10502A1F765861BA36 /* Pods_Logistics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F5262965A279970E4E04B69F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				392BE6D54858A17729EF5E30 /* Pods-Logistics.debug.xcconfig */,
+				73E0DB9260CFD9059722F747 /* Pods-Logistics.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -410,6 +426,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D4A78E523DBD47E00FF1F22 /* Build configuration list for PBXNativeTarget "Logistics" */;
 			buildPhases = (
+				7798A59ACD1FB4A5A6C310AA /* [CP] Check Pods Manifest.lock */,
 				0D4A78F523DC183B00FF1F22 /* swiftgen */,
 				0D4A78F623DC184600FF1F22 /* swiftlint */,
 				0D4A78CD23DBD47D00FF1F22 /* Sources */,
@@ -417,6 +434,8 @@
 				0D4A78CF23DBD47D00FF1F22 /* Resources */,
 				0D99E97223DE26A200F5056E /* Embed Frameworks */,
 				0D52DF1B23E7CBCD00F08921 /* Build Number */,
+				76ABEC88FAC791143385CDBB /* [CP] Embed Pods Frameworks */,
+				12E593D7C440FC09E3725D93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -561,6 +580,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "REV=$((`git log --pretty='oneline' | wc -l | sed 's/\\ //g'`))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $REV\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nSHA=`git rev-parse HEAD`\n/usr/libexec/PlistBuddy -c \"Set :git-sha1 $SHA\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n\n";
+		};
+		12E593D7C440FC09E3725D93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Logistics/Pods-Logistics-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Logistics/Pods-Logistics-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Logistics/Pods-Logistics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76ABEC88FAC791143385CDBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Logistics/Pods-Logistics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Logistics/Pods-Logistics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Logistics/Pods-Logistics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7798A59ACD1FB4A5A6C310AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Logistics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -783,11 +858,12 @@
 		};
 		0D4A78E623DBD47E00FF1F22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 392BE6D54858A17729EF5E30 /* Pods-Logistics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Logistics/Logistics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4925W78YQ;
+				DEVELOPMENT_TEAM = 3W9YNHAHJW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Logistics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -795,7 +871,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hypertrack.logistics.ios.hypertrack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logtruck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -804,11 +880,12 @@
 		};
 		0D4A78E723DBD47E00FF1F22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73E0DB9260CFD9059722F747 /* Pods-Logistics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Logistics/Logistics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4925W78YQ;
+				DEVELOPMENT_TEAM = 3W9YNHAHJW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Logistics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -816,7 +893,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hypertrack.logistics.ios.hypertrack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logtruck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -829,7 +906,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = H4925W78YQ;
+				DEVELOPMENT_TEAM = 3W9YNHAHJW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -858,7 +935,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = H4925W78YQ;
+				DEVELOPMENT_TEAM = 3W9YNHAHJW;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

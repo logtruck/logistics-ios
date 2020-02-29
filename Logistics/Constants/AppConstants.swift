@@ -8,6 +8,6 @@
 
 import Foundation
 
-let logisticsApiURL = URL(string: <#"PASTE_YOUR_SERVER_URL_HERE"#>)! // swiftlint:disable:this force_unwrapping
-let hypertrackKey = <#"PASTE_YOUR_PUBLISHABLE_KEY_HERE"#>
-let googleMapsApiKey = <#"PASTE_YOUR_GOOGLE_MAPS_API_KEY_HERE"#>
+let logisticsApiURL = URL(string: "https://logtruck.herokuapp.com/logistics")! // swiftlint:disable:this force_unwrapping
+let hypertrackKey = "8d9RdsT3A1eJEfErHcgM4aor3r2TXN3wIRNxk208qKhP-yxlnYZxudiI_3z3sINyPCtIB3fVTkgh5EovEfDkSQ"
+let googleMapsApiKey = "AIzaSyCuaHrXmxL5rM3swfWtih-fhUBj54bDkL4"
